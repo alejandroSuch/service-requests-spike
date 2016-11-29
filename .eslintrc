@@ -1,0 +1,54 @@
+{
+  "ecmaFeatures": {
+    "forOf": true
+  },
+  "extends": [
+    "angular",
+    "airbnb-base"
+  ],
+  "globals": {
+    "Chartist": true,
+    "R": true,
+    "inject": true,
+    "d3": true,
+    "nv": true
+  },
+  "env": {
+    "es6": true,
+    "mocha": true,
+    "browser": true,
+    "jasmine": true,
+    "protractor": true
+  },
+  "rules": {
+    "no-console": "off",
+    "angular/controller-as-vm": "off",
+    "class-methods-use-this": "off",
+    "angular/no-service-method": "off",
+    "import/prefer-default-export": "off",
+    "prefer-const": "off",
+    "comma-dangle": "off",
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreUrls": true
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ]
+  }
+}

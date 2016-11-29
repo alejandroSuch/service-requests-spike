@@ -16,6 +16,6 @@ module.exports = [
     new HtmlWebpackPlugin({
         template: './index.ejs',
         filename: 'index.html',
-        basePath: '/assets/'
+        basePath: '/'
     })
 ]
