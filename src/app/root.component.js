@@ -1,3 +1,5 @@
+const componentTpl = require('./root.component.html');
+
 export const RootComponent = {
-  template: require('./root.component.html')
+  template: componentTpl
 };

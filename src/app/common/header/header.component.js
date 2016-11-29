@@ -1,3 +1,5 @@
+let headerTpl = require('./header.component.html');
+
 export const HeaderComponent = {
-  template: require('./header.component.html')
+  template: headerTpl
 };

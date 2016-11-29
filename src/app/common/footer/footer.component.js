@@ -1,3 +1,5 @@
+let footerTpl = require('./footer.component.html');
+
 export const FooterComponent = {
-  template: require('./footer.component.html')
+  template: footerTpl
 };
