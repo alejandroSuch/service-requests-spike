@@ -1,0 +1,21 @@
+<h3>Nuevo servicio</h3>
+<form name="serviceRequestForm" ng-submit="$ctrl.doSubmission()">
+    <div>
+        <label>SIP <input type="text" name="sip" id="sip" ng-model="$ctrl.serviceRequest.client.sip"/></label>
+    </div>
+    <div>
+        <label>Nombre <input type="text" name="name" id="name" ng-model="$ctrl.serviceRequest.client.name"/></label>
+    </div>
+    <div>
+        <label>Teléfono <input type="text" name="phone" id="phone" ng-model="$ctrl.serviceRequest.client.phone"/></label>
+    </div>
+    <div>
+        <label>Fecha <input type="date" name="date" id="date" ng-model="$ctrl.serviceRequest.requestedDate"/></label>
+    </div>
+    <div>
+        <label>Tipo Servicio <input type="text" name="kind" id="kind" ng-model="$ctrl.serviceRequest.type"/></label>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Guardar solicitud</button>
+    </div>
+</form>

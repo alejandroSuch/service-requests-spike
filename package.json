@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint-js": "eslint 'src/**/*.js'",
-    "devServer": "webpack-dev-server --env=dev --inline --hot --colors --host 0.0.0.0 --port 3003 --open --client-log-level error --content-base build"
+    "dev-server": "webpack-dev-server --env=dev --inline --hot --colors --host 0.0.0.0 --port 3003 --open --client-log-level error --content-base build"
   },
   "keywords": [],
   "author": "",

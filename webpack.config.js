@@ -5,13 +5,14 @@ var filter = process.argv.filter(function (it) {
   return /^\-\-env/.test(it);
 })[0];
 var environment = 'prod';
-
 if (!!filter) {
   environment = filter.split('=')[1];
 }
 
-var environmentPlugins = require('./plugins.' + environment + '.js');
-var outputConfig = require('./output.' + environment + '.js');
+var environmentPlugins = require('./webpack_config/plugins.' + environment + '.js');
+var outputConfig = require('./webpack_config/output.' + environment + '.js');
+
+console.log('environment = ', environment);
 
 module.exports = {
   entry: {
@@ -45,5 +46,6 @@ module.exports = {
     ]
   },
   plugins: environmentPlugins,
-  output: outputConfig
+  output: outputConfig,
+  devtool: (environment === 'prod' ? '#hidden-' : '#') + 'source-map'
 };

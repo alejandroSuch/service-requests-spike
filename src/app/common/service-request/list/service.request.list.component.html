@@ -1,0 +1,28 @@
+<div ng-if="!$ctrl.requests.length" class="row">
+    <div class="col-xs-12">
+        <h3>No hay servicios</h3>
+    </div>
+</div>
+<div ng-if="$ctrl.requests.length" class="row">
+    <div class="col-xs-12">
+        <table class="table table-striped">
+            <tr>
+                <th>Fecha</th>
+                <th>Cliente</th>
+                <th>Teléfono</th>
+                <th>Tratamiento</th>
+            </tr>
+            <tr ng-repeat="request in $ctrl.requests track by $index">
+                <td>{{request.requestedDate | date}}</td>
+                <td>{{request.client.name}}</td>
+                <td>{{request.client.phone}}</td>
+                <td>{{request.type}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <a ui-sref="serviceRequest.new" class="btn btn-primary btn-lg btn-block">Nueva solicitud de servicio</a>
+    </div>
+</div>
