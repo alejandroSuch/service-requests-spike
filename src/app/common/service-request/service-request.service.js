@@ -17,7 +17,6 @@ export class ServiceRequestService {
   add(serviceRequest) {
     return this.http
       .post(this.url, serviceRequest)
-      .then(response => response.data)
-      .catch(() => null);
+      .then(response => response.data);
   }
 }

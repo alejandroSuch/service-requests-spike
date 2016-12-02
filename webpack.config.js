@@ -1,18 +1,9 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 
-var filter = process.argv.filter(function (it) {
-  return /^\-\-env/.test(it);
-})[0];
-var environment = 'prod';
-if (!!filter) {
-  environment = filter.split('=')[1];
-}
-
+var environment = process.env.ENVIRONMENT || 'prod';
 var environmentPlugins = require('./webpack_config/plugins.' + environment + '.js');
 var outputConfig = require('./webpack_config/output.' + environment + '.js');
-
-console.log('environment = ', environment);
 
 module.exports = {
   entry: {
@@ -20,7 +11,7 @@ module.exports = {
     vendor: [
       'angular', 'angular-formly', 'angular-messages', 'angular-ui-bootstrap', 'angular-ui-router',
       'oclazyload', 'angular-formly-templates-bootstrap', 'redux', 'ng-redux', 'immutable',
-      'pdfjs-dist', 'angular-resource'
+      'pdfjs-dist', 'angular-resource',
     ],
     'pdf.worker': 'pdfjs-dist/build/pdf.worker.entry'
   },
